@@ -1,0 +1,136 @@
+@import 'antd-theme.less';
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: #000 url('../../assets/images/bg.jpg') no-repeat center top;
+  color: #fff;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 20% 0 2% 0;
+}
+
+/* 3d */
+.cube_wrap {
+  position: absolute;
+  width: 1998px;
+  height: 1998px;
+  left: 50%;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  left: 50%;
+  top: 50%;
+  margin: -1000px 0 0 -1000px;
+}
+.cube_box {
+  position: relative;
+  width: 1998px;
+  height: 1998px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  background: blue;
+  z-index: 9;
+  transform: rotateY(36deg);
+}
+.cube_side {
+  position: absolute;
+  left: 500px;
+  top: 500px;
+  display: none;
+  width: 1000px;
+  height: 1000px;
+  opacity: 0.5;
+  border: 1px solid gold;
+  outline: 1px solid transparent;
+}
+.cube_box .front {
+  transform: translate3d(0, 0, -500px);
+}
+.cube_box .right {
+  transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, -500px);
+}
+.cube_box .left {
+  transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, -500px);
+}
+.cube_box .up {
+  transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, -500px);
+}
+.cube_box .back {
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, -500px);
+}
+.cube_box .down {
+  transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, -500px);
+}
+.control {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  height: 200px;
+}
+.control button {
+  float: left;
+  padding: 10px;
+  // font-family: \5fae\8f6f\96c5\9ed1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* krpano */
+@-ms-viewport {
+  width: device-width;
+}
+@media only screen and (min-device-width: 800px) {
+  html {
+    overflow: hidden;
+  }
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #000000;
+}
+#pano {
+  height: 100%;
+}
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
